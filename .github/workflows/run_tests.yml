@@ -32,6 +32,10 @@ jobs:
           name: Test results for Python ${{ matrix.python-version }}
           path: test-reports/
 
+      - name: Publish coverage report
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Archive coverage report
         uses: actions/upload-artifact@v3
         with:
