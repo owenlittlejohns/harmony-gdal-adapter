@@ -16,7 +16,7 @@ export HDF5_DISABLE_VERSION_CHECK=1
 #
 pytest ./tests -s --cov=gdal_subsetter --junitxml=${TEST_DIR}/reports/hga_junit.xml \
     --cov-report=html:${TEST_DIR}/coverage \
-    --cov-report=lcov:${TEST_DIR}/coverage/lcov.info
+    --cov-report=xml:${TEST_DIR}/coverage/coverage.xml
 
 RESULT=$?
 if [ "$RESULT" -ne "0" ]; then

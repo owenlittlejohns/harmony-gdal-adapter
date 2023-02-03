@@ -33,9 +33,11 @@ jobs:
           path: test-reports/
 
       - name: Publish coverage report
-        uses: coverallsapp/github-action@1.1.3
+        uses: 5monkeys/cobertura-action@v13
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: coverage/coverage.xml
+          minimum_coverage: 80
+
       - name: Archive coverage report
         uses: actions/upload-artifact@v3
         with:
