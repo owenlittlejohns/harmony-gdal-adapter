@@ -2,7 +2,6 @@ affine==2.3.0
 click==7.1.2
 click-plugins==1.1.1
 cligj==0.5.0
-coverage==5.3
 docutils==0.15.2
 Fiona==1.8.22
 geopandas==0.12.2

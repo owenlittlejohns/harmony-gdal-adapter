@@ -32,6 +32,12 @@ jobs:
           name: Test results for Python ${{ matrix.python-version }}
           path: test-reports/
 
+      - name: Publish coverage report
+        uses: 5monkeys/cobertura-action@v13
+        with:
+          path: coverage/coverage.xml
+          minimum_coverage: 80
+
       - name: Archive coverage report
         uses: actions/upload-artifact@v3
         with:
